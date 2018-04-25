@@ -22,7 +22,7 @@ public class Exam {
 	private int examID;
 	
 	@Column(name = "examname")
-	private String examname;
+	private String examName;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "courseid")
@@ -62,11 +62,11 @@ public class Exam {
 	}
 
 	public String getExamname() {
-		return examname;
+		return examName;
 	}
 
 	public void setExamname(String examname) {
-		this.examname = examname;
+		this.examName = examname;
 	}
 
 }

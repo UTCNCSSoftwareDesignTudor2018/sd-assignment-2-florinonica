@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Profile</title>
+</head>
+<body>
+<p>
+	<form action="SaveProfile" method="POST">
+		<table>
+			<tr>
+				<td>User Name: </td>
+				<td><div th:value="${student.userName}" th:name="userName"></div></td>
+			</tr>
+			<tr>
+				<td>Password: </td>
+				<td> <input th:value="${student.password}" th:type="password" th:name="password"/></td>
+			</tr>
+			<tr>
+				<td>First Name: </td>
+				<td><div th:value="${student.firstName}" th:name="firstName"/></td>
+			</tr>
+			<tr>
+				<td>Last Name: </td>
+				<td><div th:value="${student.lastName}" th:name="lastName"/></td>
+			</tr>
+			<tr>
+				<td>CNP: </td>
+				<td><div th:value="${student.CNP}" th:name="CNP" /></td>
+			</tr>
+			<tr>
+				<td>Email: </td>
+				<td><input th:value="${student.email}" th:name="email" th:type="text"/></td>
+			</tr>
+			<tr>
+				<td>Address: </td>
+				<td><input th:value="${student.address}" th:name="address" th:type="text"/></td>
+			</tr>
+			<tr>
+				<td><button type="submit"/>Save</button></td>
+			</tr>
+		</table>
+	</form>
+</p>
+</body>
+</html>

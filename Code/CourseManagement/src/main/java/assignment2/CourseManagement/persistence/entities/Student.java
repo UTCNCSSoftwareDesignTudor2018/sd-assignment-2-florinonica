@@ -44,18 +44,18 @@ public class Student {
 	@Column(name = "identitycardnumber")
 	private String identityCardNumber;
 
-	@Column(name = "group")
-	private int group;
+	@Column(name = "studentgroup")
+	private int studentGroup;
 	
-	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "s", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	private List<StudentEnrollment> enrollments;
 	
 	public int getStudentID() {
 		return studentID;
 	}
 
-	public void setStudentID(int studentID) {
-		this.studentID = studentID;
+	public void setStudentID(int id) {
+		this.studentID = id;
 	}
 
 	@Override
@@ -64,11 +64,11 @@ public class Student {
 	}
 
 	public int getGroup() {
-		return group;
+		return studentGroup;
 	}
 
 	public void setGroup(int group) {
-		this.group = group;
+		this.studentGroup = group;
 	}
 
 	public String getUsername() {

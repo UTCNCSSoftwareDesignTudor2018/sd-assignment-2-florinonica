@@ -26,7 +26,7 @@ public class Course {
 	@Column(name = "coursename")
 	private String courseName;
 	
-	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "c", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	private List<StudentEnrollment> courseStudents;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
