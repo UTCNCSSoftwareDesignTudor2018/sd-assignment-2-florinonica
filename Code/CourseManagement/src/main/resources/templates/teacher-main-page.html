@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Hello! This is your teacher page</title>
@@ -8,15 +8,15 @@
 <br><br><br><br><br><br>
 	<center>
 	
-		<form method="get" action="TeacherProfile">
+		<form method="post" th:action="@{/teacher/profile}">
 			<button type="submit" name="profile">Profile Page</button>
 		</form>
 	<br>
-		<form method="get" action="StudentManagement">
+		<form method="post" th:action="@{/teacher/management}">
 			<button type="submit" name="managements">Student Management Page</button>
 		</form>
 	<br>
-		<form method="get" action="Report">
+		<form method="post" th:action="@{/teacher/report}">
 			<button type="submit" name="reports">Report Page</button>
 		</form>
 	</center>

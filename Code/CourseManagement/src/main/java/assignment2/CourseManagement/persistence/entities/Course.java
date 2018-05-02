@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
 public class Course {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int courseID;
+		private int courseID;
 	
 	@Column(name = "coursename")
 	private String courseName;

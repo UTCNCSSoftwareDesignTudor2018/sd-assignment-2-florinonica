@@ -142,4 +142,12 @@ public class Student {
 	public void setEnrollments(List<StudentEnrollment> enrollments) {
 		this.enrollments = enrollments;
 	}
+
+	public int getStudentGroup() {
+		return studentGroup;
+	}
+
+	public void setStudentGroup(int studentGroup) {
+		this.studentGroup = studentGroup;
+	}
 }

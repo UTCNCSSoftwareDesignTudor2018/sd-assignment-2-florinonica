@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Students</title>
+</head>
+<body>
+	<h1>All students</h1>
+	<br>
+	<table border="1" cellpadding="10">
+		<tr>
+			<th>ID                      </th>
+			<th>Username                </th>
+			<th>Password                </th>
+			<th>First Name              </th>
+			<th>Last Name               </th>
+			<th>CNP                     </th>
+			<th>Identity Card Number    </th>
+			<th>Email                   </th>
+			<th>Address                 </th>
+			<th>Group                   </th>
+		</tr>
+		<tr th:each="student: ${Students}">
+			<td th:text="${student.studentID}"></td>
+			<td th:text="${student.username}"></td>
+			<td th:text="${student.password}"></td>
+			<td th:text="${student.firstName}"></td>
+			<td th:text="${student.lastName}"></td>
+			<td th:text="${student.CNP}"></td>
+			<td th:text="${student.identityCardNumber}"></td>
+			<td th:text="${student.email}"></td>
+			<td th:text="${student.address}"></td>
+			<td th:text="${student.studentGroup}"></td>
+		</tr>
+	</table>
+	<br><br>
+		<form method="post" th:action="@{/teacher/add-student}">
+			<button type="submit" name="reports">Report Page</button>
+		</form>
+</body>
+</html>

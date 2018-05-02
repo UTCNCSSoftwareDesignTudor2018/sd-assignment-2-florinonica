@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>My Enrollments</title>
+</head>
+<body>
+	<h1>Grades</h1>
+	<br>
+	<table border="1" cellpadding="10">
+		<tr>
+			<th>ID    </th>
+			<th>Date  </th>
+			<th>Mark  </th>
+			<th>Course</th>
+		</tr>
+		<tr th:each="grade: ${Grades}">
+			<td th:text="${grade.gradeID}"></td>
+			<td th:text="${grade.date}"></td>
+			<td th:text="${grade.value}"></td>
+			<td th:text="${grade.exam.course.courseName}"></td>
+		</tr>
+	</table>
+	<br><br>
+</body>
+</html>

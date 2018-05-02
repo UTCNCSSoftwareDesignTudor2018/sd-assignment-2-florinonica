@@ -25,12 +25,10 @@ public class StudentEnrollment {
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "studentid")
-	@NotNull
 	private Student s;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "courseid")
-	@NotNull
 	private Course c;
 	
 	public int getEnrollmentID() {
