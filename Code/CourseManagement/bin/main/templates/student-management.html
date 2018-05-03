@@ -34,8 +34,43 @@
 		</tr>
 	</table>
 	<br><br>
+	<h1>Add student</h1>
 		<form method="post" th:action="@{/teacher/add-student}">
-			<button type="submit" name="reports">Report Page</button>
+			<button type="submit" name="reports">Add Student</button>
 		</form>
+	<br><br>
+	<h1>Delete student by id</h1>	
+		<form method="post" th:action="@{/teacher/delete-student}">
+			<input type="text" name="id">
+        	<input type="submit">
+        </form>
+    <br><br>
+    <h1>Exam list</h1>	
+    <table border="1" cellpadding="10">
+		<tr>
+			<th>ID            </th>
+			<th>Date          </th>
+			<th>Course        </th>
+		</tr>
+		<tr th:each="exam: ${Exams}">
+			<td th:text="${exam.examID}"></td>
+			<td th:text="${exam.date}"></td>
+			<td th:text="${exam.course.courseName}"></td>
+		</tr>
+	</table>
+    <br><br>
+    <h1>Grade student</h1>	
+		<form method="post" th:action="@{/teacher/grade-student}">
+			<h4>Student ID </h4>
+			
+			<input type="text" name="studentID">
+			<h4>Exam ID </h4>
+			<input type="text" name="examID">
+			
+			<h4>Mark </h4>
+			<input type="text" name="value">
+			<br>
+        	<input type="submit">
+        </form>
 </body>
 </html>

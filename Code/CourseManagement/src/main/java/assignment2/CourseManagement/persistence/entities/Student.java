@@ -63,14 +63,6 @@ public class Student {
 		return "Student: " + this.getFirstName() + this.getLastName();
 	}
 
-	public int getGroup() {
-		return studentGroup;
-	}
-
-	public void setGroup(int group) {
-		this.studentGroup = group;
-	}
-
 	public String getUsername() {
 		return username;
 	}
